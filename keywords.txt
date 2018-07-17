@@ -13,9 +13,9 @@ pcf8951	KEYWORD1
 # Methods and Functions (KEYWORD2)
 #######################################
 
-begin  KEYWORD2
-analogWrite KEYWORD2
-analogRead KEYWORD2
+begin	KEYWORD2
+analogWrite	KEYWORD2
+analogRead	KEYWORD2
 
 #######################################
 # Instances (KEYWORD2)
