@@ -9,13 +9,13 @@ void pcf8591::begin(uint8_t addr)
 void pcf8591::analogWrite(uint8_t val)
 {
 	control_byte=control_byte|endac_addr;
-    Wire.beginTransmission(i2caddr);
+        Wire.beginTransmission(i2caddr);
 	Wire.write(control_byte);
 	Wire.write(val);
 	Wire.endTransmission();
 }
 
-uint8_t pcf8591::analogRead(uint8_t channel,int input_type)
+uint8_t pcf8591::analogRead(uint8_t channel,int input_type) //input type: 0:Four single-ended inputs 1:Three differential inputs 2:Single-ended and differential mixed 3:Two differential inputs    For more information, please refer to the datasheet.
 {
    uint8_t adc_buff;
    control_byte=control_byte&0xCF;
